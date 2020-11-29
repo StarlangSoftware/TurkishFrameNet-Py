@@ -12,6 +12,9 @@ class LexicalUnit:
         for element in root:
             self.frameElements.append(element.text)
 
+    def getSynSetId(self) -> str:
+        return self.synSetId
+
     def size(self) -> int:
         return len(self.frameElements)
 

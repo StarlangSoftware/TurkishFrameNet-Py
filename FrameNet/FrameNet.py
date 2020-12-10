@@ -7,13 +7,19 @@ class FrameNet:
 
     frames: list
 
-    def __init__(self, directory="../Frames/"):
+    def __init__(self):
         self.frames = []
-        for r, d, f in os.walk(directory):
-            for file in f:
-                if file.endswith(".xml"):
-                    root = xml.etree.ElementTree.parse(os.path.join(r, file)).getroot()
-                    self.frames.append(Frame(file, root))
+        root = xml.etree.ElementTree.parse("../framenet.xml").getroot()
+        for frameNode in root:
+            frame = Frame(frameNode.attrib["NAME"])
+            for childNode in frameNode:
+                if childNode.tag == "LEXICAL_UNITS":
+                    for lexicalUnit in childNode:
+                        frame.addLexicalUnit(lexicalUnit.text)
+                elif childNode.tag == "FRAME_ELEMENTS":
+                    for frameElement in childNode:
+                        frame.addFrameElement(frameElement.text)
+            self.frames.append(frame)
 
     def lexicalUnitExists(self, synSetId: str) -> bool:
         for frame in self.frames:

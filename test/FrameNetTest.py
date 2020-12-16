@@ -21,11 +21,11 @@ class FrameNetTest(unittest.TestCase):
         count = 0
         for i in range(self.frameNet.size()):
             count += self.frameNet.getFrame(i).frameElementSize()
-        self.assertEquals(915, count)
+        self.assertEquals(1665, count)
 
     def test_DistinctFrameElements(self):
         elements = set()
         for i in range(self.frameNet.size()):
             for j in range(self.frameNet.getFrame(i).frameElementSize()):
                 elements.add(self.frameNet.getFrame(i).getFrameElement(j))
-        self.assertEquals(203, len(elements))
+        self.assertEquals(289, len(elements))

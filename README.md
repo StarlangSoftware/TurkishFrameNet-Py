@@ -60,3 +60,12 @@ Steps for opening the cloned project:
 * Choose `TurkishFrameNet-Py` file
 * Select open as project option
 * Couple of seconds, dependencies will be downloaded. 
+
+# Cite
+
+	@inproceedings{marsan20,
+ 	title = {{B}uilding the {T}urkish {F}rame{N}et},
+ 	year = {2021},
+ 	author = {B. Marsan and N. Kara and M. Ozcelik and B. N. Arican and N. Cesur and A. Kuzgun and E. Saniyar and O. Kuyrukcu and O. T. Y{\i}ld{\i}z},
+ 	booktitle = {Proceedings of GWC 2021}
+	}

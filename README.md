@@ -75,7 +75,7 @@ FrameNet'i okumak ve tüm Frameleri hafızada tutmak için
 
 Frameleri tek tek gezmek için
 
-	for i in (a.size()):
+	for i in range(a.size()):
 		frame = a.getFrame(i)
 	
 

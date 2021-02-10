@@ -61,6 +61,38 @@ Steps for opening the cloned project:
 * Select open as project option
 * Couple of seconds, dependencies will be downloaded. 
 
+Detailed Description
+============
+
++ [FrameNet](#framenet)
++ [Frame](#frame)
+
+## FrameNet
+
+FrameNet'i okumak ve tüm Frameleri hafızada tutmak için
+
+	a = FrameNet()
+
+Frameleri tek tek gezmek için
+
+	for i in (a.size()):
+		frame = a.getFrame(i)
+	
+
+Bir fiile ait olan Frameleri bulmak için
+
+	frames = a.getFrames("TUR10-1234560")
+
+## Frame
+
+Bir framein lexical unitlerini getirmek için
+
+	getLexicalUnit(self, index: int) -> str
+		
+Bir framein frame elementlerini getirmek için
+
+	getFrameElement(self, index: int) -> str
+
 # Cite
 
 	@inproceedings{marsan20,

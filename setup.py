@@ -2,11 +2,11 @@ from setuptools import setup
 
 from pathlib import Path
 this_directory = Path(__file__).parent
-long_description = (this_directory / "README.md").read_text()
+long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 setup(
     name='NlpToolkit-FrameNet',
-    version='1.0.6',
+    version='1.0.7',
     packages=['FrameNet', 'FrameNet.data'],
     package_data={'FrameNet.data': ['*.xml']},
     url='https://github.com/StarlangSoftware/TurkishFrameNet-Py',

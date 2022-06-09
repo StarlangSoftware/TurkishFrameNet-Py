@@ -17,6 +17,11 @@ We took a closer look at Turkish WordNet and designated 8 domains that would pos
 English FrameNet were adopted when possible and new frames were created when needed. In the next phase, team of annotators will attack the
 Turkish predicate compilation offered by TRopBank and KeNet for a lemma-by-lemma annotation process. This way, both penetration and coverage of the Turkish FrameNet will be increased.
 
+Video Lectures
+============
+
+[<img src="https://github.com/StarlangSoftware/TurkishFrameNet/blob/master/video.jpg" width="50%">](https://youtu.be/mE600WMdSrQ)
+
 For Developers
 ============
 

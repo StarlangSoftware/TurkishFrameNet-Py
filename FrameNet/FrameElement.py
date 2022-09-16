@@ -1,6 +1,6 @@
 class FrameElement(object):
 
-    __frameElementType: str
+    __frame_element_type: str
     __frame: str
     __id: str
 
@@ -16,13 +16,16 @@ class FrameElement(object):
             Argument string containing the argumentType and id
         """
         if "$" in frameElement:
-            self.__frameElementType = frameElement[0:frameElement.index("$")]
+            self.__frame_element_type = frameElement[0:frameElement.index("$")]
             self.__frame = frameElement[frameElement.index("$") + 1:frameElement.rindex("$")]
             self.__id = frameElement[frameElement.rindex("$") + 1:]
         else:
-            self.__frameElementType = "NONE"
+            self.__frame_element_type = "NONE"
 
-    def initWithId(self, frameElementType: str, frame: str, _id: str):
+    def initWithId(self,
+                   frameElementType: str,
+                   frame: str,
+                   _id: str):
         """
         Another constructor of FrameElement class which takes frameElementType and id as inputs and initializes corresponding
         attributes
@@ -31,10 +34,12 @@ class FrameElement(object):
         ----------
         frameElementType : str
             Type of the argument
+        frame : str
+            Frame of the argument
         _id : str
             Id of the argument
         """
-        self.__frameElementType = frameElementType
+        self.__frame_element_type = frameElementType
         self.__frame = frame
         self.__id = _id
 
@@ -47,7 +52,7 @@ class FrameElement(object):
         str
             frameElementType.
         """
-        return self.__frameElementType
+        return self.__frame_element_type
 
     def getFrame(self) -> str:
         """
@@ -81,7 +86,7 @@ class FrameElement(object):
         str
             string form of argument
         """
-        if self.__frameElementType == "NONE":
-            return self.__frameElementType
+        if self.__frame_element_type == "NONE":
+            return self.__frame_element_type
         else:
-            return self.__frameElementType + "$" + self.__frame + "$" + self.__id
+            return self.__frame_element_type + "$" + self.__frame + "$" + self.__id

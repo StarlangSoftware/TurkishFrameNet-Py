@@ -9,23 +9,23 @@ class FrameNetTest(unittest.TestCase):
         self.frameNet = FrameNet()
 
     def test_FrameSize(self):
-        self.assertEqual(139, self.frameNet.size())
+        self.assertEqual(809, self.frameNet.size())
 
     def test_LexicalUnitSize(self):
         count = 0
         for i in range(self.frameNet.size()):
             count += self.frameNet.getFrame(i).lexicalUnitSize()
-        self.assertEqual(2561, count)
+        self.assertEqual(8489, count)
 
     def test_FrameElementSize(self):
         count = 0
         for i in range(self.frameNet.size()):
             count += self.frameNet.getFrame(i).frameElementSize()
-        self.assertEqual(1665, count)
+        self.assertEqual(8656, count)
 
     def test_DistinctFrameElements(self):
         elements = set()
         for i in range(self.frameNet.size()):
             for j in range(self.frameNet.getFrame(i).frameElementSize()):
                 elements.add(self.frameNet.getFrame(i).getFrameElement(j))
-        self.assertEqual(289, len(elements))
+        self.assertEqual(1012, len(elements))

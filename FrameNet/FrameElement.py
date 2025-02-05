@@ -4,7 +4,7 @@ class FrameElement(object):
     __frame: str
     __id: str
 
-    def __init__(self, frameElement: str):
+    def constructor1(self, frameElement: str):
         """
         A constructor of FrameElement class which takes frameElement string which is in the form of frameElementType$id
         and parses this string into frameElementType and id. If the frameElement string does not contain '$' then the
@@ -22,7 +22,7 @@ class FrameElement(object):
         else:
             self.__frame_element_type = "NONE"
 
-    def initWithId(self,
+    def constructor2(self,
                    frameElementType: str,
                    frame: str,
                    _id: str):
@@ -42,6 +42,14 @@ class FrameElement(object):
         self.__frame_element_type = frameElementType
         self.__frame = frame
         self.__id = _id
+
+    def __init__(self, frameElementOrType: str,
+                 frame: str = None,
+                 id: str = None):
+        if frame is None:
+            self.constructor1(frameElementOrType)
+        else:
+            self.constructor2(frameElementOrType, frame, id)
 
     def getFrameElementType(self) -> str:
         """
@@ -75,6 +83,9 @@ class FrameElement(object):
             id.
         """
         return self.__id
+
+    def setId(self, _id: str):
+        self.__id = _id
 
     def __str__(self) -> str:
         """

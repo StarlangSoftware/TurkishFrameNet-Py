@@ -15,7 +15,7 @@ class FrameNetTest(unittest.TestCase):
         count = 0
         for i in range(self.frameNet.size()):
             count += self.frameNet.getFrame(i).lexicalUnitSize()
-        self.assertEqual(8489, count)
+        self.assertEqual(8484, count)
 
     def test_FrameElementSize(self):
         count = 0

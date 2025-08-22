@@ -6,7 +6,7 @@ long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 setup(
     name='NlpToolkit-FrameNet',
-    version='1.0.9',
+    version='1.0.10',
     packages=['FrameNet', 'FrameNet.data'],
     package_data={'FrameNet.data': ['*.xml']},
     url='https://github.com/StarlangSoftware/TurkishFrameNet-Py',

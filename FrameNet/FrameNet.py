@@ -38,7 +38,7 @@ class FrameNet:
                 return True
         return False
 
-    def getFrames(self, synSetId: str) -> list:
+    def getFrames(self, synSetId: str) -> list[Frame]:
         """
         Returns an array of frames that contain the given lexical unit in their lexical units
         :param synSetId: Id of the lexical unit.

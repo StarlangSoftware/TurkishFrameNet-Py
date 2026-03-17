@@ -17,6 +17,10 @@ We took a closer look at Turkish WordNet and designated 8 domains that would pos
 English FrameNet were adopted when possible and new frames were created when needed. In the next phase, team of annotators will attack the
 Turkish predicate compilation offered by TRopBank and KeNet for a lemma-by-lemma annotation process. This way, both penetration and coverage of the Turkish FrameNet will be increased.
 
+Simple Web Interface
+============
+[Link 1](https://starlangsoftware.github.io/nlptoolkit-web-simple/turkish-framenet.html) [Link 2](http://104.247.163.162/nlptoolkit/turkish-framenet.html)
+
 Video Lectures
 ============
 
